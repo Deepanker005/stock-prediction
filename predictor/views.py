@@ -1,5 +1,8 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 
+from django.shortcuts import render
+
 def home(request):
-    return HttpResponse("Hello! The stock predictor API is awake.")
+    # Instead of HttpResponse, we now "render" the HTML template
+    return render(request, 'index.html')

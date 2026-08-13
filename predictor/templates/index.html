@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Equilibrium Finance | MSFT Predictor</title>
+    <style>
+        /* CSS Reset and Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+        
+        body {
+            background-color: #f8f9f8; /* Soothing off-white pastel background */
+            color: #1a1f1c;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Navigation Bar */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 24px 48px;
+        }
+
+        .logo {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #4a6741;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 24px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #555;
+            font-size: 0.9rem;
+        }
+
+        .nav-links a.active {
+            color: #4a6741;
+            font-weight: 600;
+            border-bottom: 2px solid #4a6741;
+            padding-bottom: 4px;
+        }
+
+        .auth-buttons button {
+            background: none;
+            border: none;
+            padding: 10px 20px;
+            font-size: 0.9rem;
+            cursor: pointer;
+        }
+
+        .btn-get-started {
+            background-color: #7d9c65 !important; /* Muted pastel green */
+            color: white !important;
+            border-radius: 50px !important;
+        }
+
+        /* Main Content Area */
+        main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+            letter-spacing: -0.5px;
+        }
+
+        .subtitle {
+            color: #666;
+            margin-bottom: 40px;
+            font-size: 1.1rem;
+        }
+
+        /* The Prediction Button */
+        .predict-btn {
+            background-color: #7d9c65;
+            color: white;
+            font-size: 1.1rem;
+            font-weight: 600;
+            padding: 16px 32px;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: transform 0.2s, background-color 0.2s;
+            margin-bottom: 40px;
+        }
+
+        .predict-btn:hover {
+            background-color: #6a8854;
+            transform: translateY(-2px);
+        }
+
+        /* The Prediction Output Card */
+        .prediction-card {
+            background-color: white;
+            padding: 40px 60px;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.03); /* Soft, elevated flat vector look */
+            min-width: 400px;
+        }
+
+        .card-label {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #888;
+            margin-bottom: 16px;
+            font-weight: 600;
+        }
+
+        .price-output {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #1a1f1c;
+            margin-bottom: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .price-output .currency {
+            color: #7d9c65;
+        }
+
+        .status-text {
+            font-size: 0.85rem;
+            color: #666;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">Equilibrium Finance</div>
+        <div class="nav-links">
+            <a href="#">Dashboard</a>
+            <a href="#" class="active">Forecasts</a>
+            <a href="#">Portfolio</a>
+            <a href="#">Analysis</a>
+        </div>
+        <div class="auth-buttons">
+            <button>Login</button>
+            <button class="btn-get-started">Get Started</button>
+        </div>
+    </nav>
+
+    <main>
+        <h1>Microsoft (MSFT) Price Forecaster</h1>
+        <p class="subtitle">AI-driven prediction for the next trading day.</p>
+
+        <!-- We will connect this button to your Python logic in the next phase -->
+        <button class="predict-btn">Predict Tomorrow's Close</button>
+
+        <div class="prediction-card">
+            <div class="card-label">Predicted Close</div>
+            <div class="price-output">
+                <span class="currency">$</span>_ _ _ . _ _
+            </div>
+            <div class="status-text">
+                &#9432; Awaiting prediction generation
+            </div>
+        </div>
+    </main>
+</body>
+</html>
